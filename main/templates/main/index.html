@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>Главная</h1>
+{% for el in users %}
+<div class="alert alert-warning mt-2">
+    <h2>Nick: {{ el.nickname }}</h2>
+    <p>UserId: {{ el.user_id }}</p>
+    <p>Login: {{ el.login }}</p>
+    <p>Password: {{ el.password }}</p>
+</div>
+{% endfor %}
+{% endblock %}
